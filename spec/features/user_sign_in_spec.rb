@@ -11,10 +11,10 @@ feature 'user sign in', %Q{
   #Error message for invalid email
   #Error message for wrong password
   #If I forget my password, I can request to receive an email with instructions to reset my password
-before :each do
-@user = FactoryGirl.create(:user)
-visit new_user_session_path
-end
+  before :each do
+    @user = FactoryGirl.create(:user)
+    visit new_user_session_path
+  end
   scenario 'user provides valid information and signs in successfully' do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
