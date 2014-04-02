@@ -25,7 +25,6 @@ feature 'user sign in', %Q{
   end
 
 
-
   scenario 'user provides invalid email' do
     user = FactoryGirl.create(:user)
     visit new_user_session_path
