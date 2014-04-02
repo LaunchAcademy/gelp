@@ -1,10 +1,8 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :ruby_gem do
-    name "MyString"
-    author "MyString"
-    description "MyText"
-    github_url "MyString"
+    sequence(:name) { |n| "#{n} THE GEM"}
+    author "Laura 'Lauren' Gemwriter"
+    description "Another Gem Oh wow"
+    github_url "www.github.com/gemland"
   end
 end

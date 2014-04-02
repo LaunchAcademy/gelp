@@ -14,18 +14,57 @@ feature "User creates new gem", %Q{
 # Error if gem already exists with that name
 # Error if I don't provide a description
 
-  scenario "With valid attributes" do
+  # let(:ruby_gem) { FactoryGirl.build(:ruby_gem) }
 
-    visit new_gem_path
-    fill_in "Name", with: "Gemmmm"
-    fill_in "Author", with: "Captain Gemmy"
-    fill_in "Description", with: "Another fantastic gem from Captain Gemmy"
-    fill_in "Github URL", with: "www.github.com"
+  before :each do
+    @ruby_gem = FactoryGirl.build(:ruby_gem)
+    visit new_ruby_gem_path
+  end
+
+  scenario "With valid attributes" do
+    prev_count = RubyGem.count
+
+    fill_in "Name", with: @ruby_gem.name
+    fill_in "Author", with: @ruby_gem.author
+    fill_in "Description", with: @ruby_gem.description
+    fill_in "Github url", with: @ruby_gem.github_url
 
     click_on "Add gem!"
 
-    expect(page).to have_content ("Gemmmm")
-    expect(page).to have_content ("Another fantastic gem from Captain Gemmy")
+    expect(page).to have_content (@ruby_gem.name)
+    expect(page).to have_content (@ruby_gem.description)
     expect(page).to have_content ("Successfully added gem")
+    expect(RubyGem.count).to eq prev_count + 1
+  end
+
+# Helen this test is what I was talking to you about when you were leaving.
+# It looks so stupid and I hate it, but it works, which I also hate.
+# The commented part is what you had suggested, it looked like it was going to be much prettier.
+# I was not smart enough for it. Saddness abounds.
+# Signed,
+# Your friend,
+# Michael
+#
+# P.S. The github URL demands a URL, including http:// before it, despite us not making it do that.
+# witchcraft is suspected.
+
+
+   scenario "without required attributes" do
+     click_on "Add gem!"
+     # within(:css, 'ruby_gem_name') do
+       expect(page).to have_content ("Namecan't be blank")
+     # end
+     fill_in "Name", with: @ruby_gem.name
+     click_on "Add gem!"
+     expect(page).to have_content ("Descriptioncan't be blank")
+   end
+
+  scenario "gem already exists" do
+    @ruby_gem.save
+    fill_in "Name", with: @ruby_gem.name
+    fill_in "Description", with: @ruby_gem.description
+    click_on "Add gem!"
+
+    expect(page).to have_content ("has already been taken")
   end
 end
