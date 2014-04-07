@@ -51,11 +51,12 @@ feature "User creates new gem", %Q{
 
    scenario "without required attributes" do
      click_on "Add gem!"
-     # within(:css, 'ruby_gem_name') do
-       expect(page).to have_content ("Namecan't be blank")
-     # end
+     # expect(page).to have_content ("Gem not created")
+     expect(page).to have_content ("Namecan't be blank")
+  
      fill_in "Name", with: @ruby_gem.name
      click_on "Add gem!"
+
      expect(page).to have_content ("Descriptioncan't be blank")
    end
 
@@ -65,6 +66,7 @@ feature "User creates new gem", %Q{
     fill_in "Description", with: @ruby_gem.description
     click_on "Add gem!"
 
-    expect(page).to have_content ("has already been taken")
+    # expect(page).to have_content ("Gem not created")
+    expect(page).to have_content ("Namehas already been taken")
   end
 end
