@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: gemmerator_development
+  database: gelp_development
   pool: 5
   username:
   password:
@@ -46,7 +46,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: gemmerator_test
+  database: gelp_test
   pool: 5
   username:
   password:
@@ -54,7 +54,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: gemmerator_production
+  database: gelp_production
   pool: 5
   username:
   password:

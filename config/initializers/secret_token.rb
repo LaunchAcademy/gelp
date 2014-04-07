@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Gemmerator::Application.config.secret_key_base = '783d1448ab0327b93ad2bbfdf473a10af5c10ef2c89b6d9d46d5cd2125a331f7adf0c243790e1f7f4acb18588d5f012231e000bf55fd475f14f10092b9c5e151'
+Gelp::Application.config.secret_key_base = '783d1448ab0327b93ad2bbfdf473a10af5c10ef2c89b6d9d46d5cd2125a331f7adf0c243790e1f7f4acb18588d5f012231e000bf55fd475f14f10092b9c5e151'

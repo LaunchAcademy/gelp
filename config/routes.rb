@@ -1,4 +1,4 @@
-Gemmerator::Application.routes.draw do
+Gelp::Application.routes.draw do
   resources :ruby_gems
 
   devise_for :users
