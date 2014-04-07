@@ -13,3 +13,5 @@
     <td><%= "Github URL: #{@ruby_gem.github_url}" %></td>
   </tr>
 </table>
+
+<%= link_to 'Submit a Review', new_ruby_gem_review_path(@ruby_gem) %>

@@ -18,6 +18,10 @@ class RubyGemsController < ApplicationController
     @ruby_gem = RubyGem.find(params[:id])
   end
 
+  def index
+    @ruby_gems = RubyGem.all
+  end
+
 
   private
 

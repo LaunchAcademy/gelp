@@ -22,4 +22,5 @@ describe RubyGem do
 
   it { should have_valid(:github_url).when('www.github.com', 'www.github.com/laura') }
 
+  it {should have_many(:reviews)}
 end
