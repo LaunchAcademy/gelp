@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
   before_action :find_ruby_gem
 
   def index
-
+    @reviews = @ruby_gem.reviews
   end
 
   def new
@@ -19,9 +19,25 @@ class ReviewsController < ApplicationController
       render new,
       notice: "Something went wrong"
     end
-
   end
 
+  def show
+    @review = Review.find(params[:id])
+  end
+
+  def edit
+    @review = Review.find(params[:id])
+  end
+
+  def update
+     @review = Review.find(params[:id])
+     if @review.update(review_params)
+      redirect_to ruby_gem_path(@ruby_gem),
+      notice: 'Review Successfully Updated'
+    else
+      render action: 'edit'
+    end
+  end
 
   protected
 

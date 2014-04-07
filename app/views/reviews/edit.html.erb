@@ -1,0 +1,10 @@
+<%= simple_form_for [@ruby_gem, @review] do |f| %>
+
+  <%= f.input :title %>
+  <%= f.input :body %>
+  <%= f.input :rating, collection: 1..5 %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :ruby_gem_id, :value => @ruby_gem.id %>
+  <%= f.button :submit %>
+<%end%>
+
