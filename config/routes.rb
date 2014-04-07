@@ -1,4 +1,6 @@
 Gemmerator::Application.routes.draw do
-  resources :ruby_gems #, only: [:new]
-  # This made everything break, why did Helen betray us??? >:(
+  resources :ruby_gems
+
+  devise_for :users
+  root "welcome#index"
 end
