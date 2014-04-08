@@ -1,0 +1,3 @@
+<%= @reviews.each do |review| %>
+  <li><%= link_to review.title, ruby_gem_review_path(review)%></li>
+<%end%>
