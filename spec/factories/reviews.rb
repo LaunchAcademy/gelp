@@ -5,7 +5,7 @@ FactoryGirl.define do
      title "Ruby Gem"
      body "review here"
      rating 5
-     user_id 1
-     ruby_gem_id 1
+     user
+     ruby_gem
   end
 end

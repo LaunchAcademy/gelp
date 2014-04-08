@@ -2,10 +2,6 @@ class ReviewsController < ApplicationController
 
   before_action :find_ruby_gem
 
-  def index
-    @reviews = @ruby_gem.reviews
-  end
-
   def new
     @review = Review.new
   end
@@ -35,7 +31,7 @@ class ReviewsController < ApplicationController
       redirect_to ruby_gem_path(@ruby_gem),
       notice: 'Review Successfully Updated'
     else
-      render action: 'edit'
+      render 'edit'
     end
   end
 
@@ -46,7 +42,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:title, :body, :rating, :user_id, :ruby_gem_id)
+    params.require(:review).permit(:title, :body, :rating).merge(user: current_user)
   end
 
 end
