@@ -1,5 +1,4 @@
 # require 'spec_helper'
-
 # feature "User views a list of gems", %Q{
 #   As an authenticated user
 #   I want view a list of gems
@@ -8,15 +7,28 @@
 
 
 # scenario "I want to view a list of gems" do
+#   rubygems = FactoryGirl.create_list(:ruby_gem, 3)
 
-#   ruby_gem1 = RubyGem.new
-#   ruby_gem2 = RubyGem.new
+#   visit ruby_gems_path
 
-# ruby_gems.each do |ruby_gem|
-#   expect(page).to have_content ruby_gem.name
-#   expect(page).to have_content ruby_gem.description
-#   expect(page).to have_content ruby_gem.author
-# end
+#   rubygems.each do |rubygem|
+#     expect(page).to have_content(rubygem.name)
+#     expect(page).to have_content(rubygem.description)
+#   end
+
+#   # ruby_gem1 = FactoryGirl.create(:ruby_gem)
+#   # ruby_gem2 = FactoryGirl.create(:ruby_gem)
+
+#   # visit ruby_gems_path
+#   # expect(page).to have_content(ruby_gem1.name, ruby_gem1.description, ruby_gem2.name, ruby_gem2.description)
+
+#   end
+
+#   scenario "no gems have been created yet"
+  
+#   expect(page).to have_content("No gems have been created. Add a gem!")
+
+# end 
 
 
 # scenario "no gems have been created yet"

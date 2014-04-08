@@ -1,4 +1,5 @@
-Gemmerator::Application.routes.draw do
+
+Gelp::Application.routes.draw do
   resources :ruby_gems do
     resources :reviews
   end

@@ -6,12 +6,11 @@ class RubyGemsController < ApplicationController
   def create
     @ruby_gem = RubyGem.new(ruby_gem_params)
 
-      if @ruby_gem.save
-        redirect_to @ruby_gem
-        flash[:notice] = "Successfully added gem"
-      else
-        render 'new'
-      end
+    if @ruby_gem.save
+      redirect_to @ruby_gem, notice: "Successfully added gem"
+    else
+      render 'new', notice: "Gem not created"
+    end
   end
 
   def show
