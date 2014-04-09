@@ -16,6 +16,16 @@ ActiveRecord::Schema.define(version: 20140408154357) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "reviews", force: true do |t|
+    t.string   "title",       null: false
+    t.text     "body",        null: false
+    t.integer  "rating",      null: false
+    t.integer  "ruby_gem_id", null: false
+    t.integer  "user_id",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "ruby_gems", force: true do |t|
     t.string   "name",        null: false
     t.string   "author"
