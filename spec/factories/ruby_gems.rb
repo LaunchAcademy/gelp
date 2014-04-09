@@ -3,6 +3,6 @@ FactoryGirl.define do
     sequence(:name) { |n| "#{n} THE GEM"}
     author "Laura 'Lauren' Gemwriter"
     description "Another Gem Oh wow"
-    github_url "www.github.com/gemland"
+    github_url "http://www.github.com/gemland"
   end
 end
