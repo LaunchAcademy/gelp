@@ -26,13 +26,13 @@ feature "Admin views user index", %Q{
   scenario "an unauthenticated user tries to visit user index" do
     visit admin_users_path
 
-    expect(page).to have_content('The page you were looking for doesn\'t exist (404)')
+    expect(page).to have_content("The page you were looking for doesn't exist (404)")
   end
 
   scenario "a non-admin user tries to visit user index" do
     sign_in_as(@user)
     visit admin_users_path
 
-    expect(page).to have_content('The page you were looking for doesn\'t exist (404)')
+    expect(page).to have_content("The page you were looking for doesn't exist (404)")
   end
 end

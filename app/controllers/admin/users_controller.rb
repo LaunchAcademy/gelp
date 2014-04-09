@@ -5,6 +5,12 @@ module Admin
       @user = User.all
     end
 
+    def destroy
+      @user = User.find(params[:id])
+      @user.delete
+      redirect_to admin_users_path
+  end
+
     protected
     def authenticate_admin
       if !current_user || current_user.admin? != true
