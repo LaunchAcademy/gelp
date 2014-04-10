@@ -8,6 +8,7 @@ Gelp::Application.routes.draw do
 
   namespace :admin do
     resources :users, only: [:index, :destroy]
+    resources :reviews, only: [:index, :destroy]
   end
 
   root "welcome#index"

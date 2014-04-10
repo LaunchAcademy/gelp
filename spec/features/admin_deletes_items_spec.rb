@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-feature "Admin has site privileges", %Q{
+feature "Admin can delete items", %Q{
   As an administrator
-  I want special privileges over users
+  I want to have the ability to delete items
   So that I can moderate the site
 } do
 
@@ -27,18 +27,17 @@ feature "Admin has site privileges", %Q{
     expect(page).to_not have_content(@ruby_gem.name)
   end
 
-  # scenario "Admin deletes reviews" do
-  #   sign_in_as(@admin)
-  #   visit reviews_path
-  #   expect(page).to have_content(@review.IDONOTKNOWYET!)
-  #   expect(page).to have_content('Delete User')
+  scenario "Admin deletes reviews" do
+    sign_in_as(@admin)
+    visit admin_reviews_path
+    expect(page).to have_content(@review.title)
+    expect(page).to have_content("Delete Review #{@review.title}")
 
-  #   click_on 'Delete Gem'
+    click_on "Delete Review #{@review.title}"
 
-  #   expect(page).to_not have_content(@user.first_name)
+    expect(page).to_not have_content(@review.title)
 
-  # # Reviews not yet merged in
-  # end
+  end
 
   scenario "Admin deletes users" do
     sign_in_as(@admin)
