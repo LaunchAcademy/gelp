@@ -16,3 +16,25 @@
     <td><%= "Github URL: #{@ruby_gem.github_url}" %></td>
   </tr>
 </table>
+
+<li><%= link_to 'Submit a Review', new_ruby_gem_review_path(@ruby_gem) %></li>
+
+<!-- need to add authorization for editing function -->
+<table>
+  <thead>
+    <th> Current Reviews</th>
+    <th> Date Submitted </th>
+  </thead>
+
+<% @reviews.each do |review|%>
+  <tbody>
+    <tr>
+    <td><%= link_to review.title, ruby_gem_review_path(@ruby_gem, review)%></td>
+    <td><%= review.created_at%></td>
+  <%if current_user == review.user%>
+    <td><%= link_to 'Edit Review', edit_ruby_gem_review_path(@ruby_gem, review)%></td>
+  <%end%>
+    </tr>
+  </tbody>
+<%end%>
+</table>
