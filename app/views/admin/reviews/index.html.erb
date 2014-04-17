@@ -1,0 +1,13 @@
+<%- if @review.present? -%>
+  <table>
+    <%- @review.each do |review| %>
+      <tr>
+        <td><%= review.title %></td>
+        <td><%= review.body %></td>
+        <td><%= review.rating %></td>
+        <td><%= review.user_id %></td>
+        <td><%= link_to "Delete Review #{review.title}", admin_review_path(review), method: :delete %></td>
+      </tr>
+    <%- end -%>
+  </table>
+<%- end -%>
