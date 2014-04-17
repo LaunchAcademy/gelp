@@ -21,15 +21,17 @@ feature "Admin can delete items", %Q{
     visit ruby_gems_path
 
     expect(page).to have_content(@ruby_gem.name)
-    expect(page).to have_content('Delete Gem')
+    expect(page).to have_content("Delete Gem #{@ruby_gem.name}")
 
-    click_on 'Delete Gem'
+    click_on "Delete Gem #{@ruby_gem.name}"
     expect(page).to_not have_content(@ruby_gem.name)
   end
 
   scenario "Admin deletes reviews" do
     sign_in_as(@admin)
+    @review = FactoryGirl.create(:review)
     visit admin_reviews_path
+
     expect(page).to have_content(@review.title)
     expect(page).to have_content("Delete Review #{@review.title}")
 
@@ -53,7 +55,7 @@ feature "Admin can delete items", %Q{
 
   scenario "User cannot see Admin options" do
     sign_in_as(@user)
-    visit ruby_gem_path
+    visit ruby_gems_path
     expect(page).to have_content(@ruby_gem.name)
     expect(page).to_not have_content('Delete User')
   end

@@ -9,7 +9,7 @@ module Admin
       @user = User.find(params[:id])
       @user.delete
       redirect_to admin_users_path
-  end
+    end
 
     protected
     def authenticate_admin

@@ -9,7 +9,7 @@ module Admin
       @review = Review.find(params[:id])
       @review.delete
       redirect_to admin_reviews_path
-  end
+    end
 
     protected
     def authenticate_admin

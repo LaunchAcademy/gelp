@@ -1,3 +1,6 @@
 <% @ruby_gems.each do |ruby| %>
 <li><%= link_to ruby.name, ruby_gem_path(ruby) %> </li>
+  <% if current_user.admin %>
+    <%= link_to "Delete Gem #{ruby.name}", admin_ruby_gem_path(ruby), method: :delete %>
+  <% end %>
 <%end%>

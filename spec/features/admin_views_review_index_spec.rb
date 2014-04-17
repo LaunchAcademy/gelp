@@ -21,7 +21,7 @@ feature "Admin views review index", %Q{
     visit admin_reviews_path
 
     expect(page).to have_content(@review.title)
-    expect(page).to have_content(@review.description)
+    expect(page).to have_content(@review.body)
   end
 
   scenario "an unauthenticated user tries to visit review index" do
