@@ -15,14 +15,15 @@ feature 'user votes on an existing review', %Q{
   before :each do 
     user = FactoryGirl.create(:user)
       sign_in_as(user)
-      review = FactoryGirl.create(:review)
       ruby_gem = FactoryGirl.create(:ruby_gem)
+      review = FactoryGirl.create(:review, ruby_gem: ruby_gem)
+      
       visit ruby_gem_path(ruby_gem)
     end
 
 
   scenario 'there is an upvote and downvote button' do
-    
+    save_and_open_page
     expect(page).to have_content('Upvote') 
     expect(page).to have_content('Downvote')
   end
