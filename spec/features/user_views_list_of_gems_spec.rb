@@ -1,20 +1,27 @@
-# require 'spec_helper'
-# feature "User views a list of gems", %Q{
-#   As an authenticated user
-#   I want view a list of gems
-#   So I can see their reviews
-# } do
+require 'spec_helper'
+feature "User views a list of gems", %Q{
+  As an authenticated user
+  I want view a list of gems
+  So I can see their reviews
+} do
 
 
-# scenario "I want to view a list of gems" do
-#   rubygems = FactoryGirl.create_list(:ruby_gem, 3)
+scenario "I want to view a list of gems" do
+  rubygems = FactoryGirl.create_list(:ruby_gem, 3)
 
-#   visit ruby_gems_path
+    visit ruby_gems_path
 
-#   rubygems.each do |rubygem|
-#     expect(page).to have_content(rubygem.name)
-#     expect(page).to have_content(rubygem.description)
-#   end
+    rubygems.each do |rubygem|
+      expect(page).to have_content(rubygem.name)
+      expect(page).to have_content(rubygem.description)
+    end
+  end
+end
+
+#--------> CREATE INDEX
+
+
+
 
 #   # ruby_gem1 = FactoryGirl.create(:ruby_gem)
 #   # ruby_gem2 = FactoryGirl.create(:ruby_gem)
