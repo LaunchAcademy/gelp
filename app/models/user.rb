@@ -11,5 +11,4 @@ class User < ActiveRecord::Base
   has_many :reviews, dependent: :nullify
   has_many :votes, dependent: :destroy
 
-
 end

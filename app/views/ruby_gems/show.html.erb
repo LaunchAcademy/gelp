@@ -24,7 +24,9 @@
   <thead>
     <th> Current Reviews</th>
     <th> Date Submitted </th>
+
     <th> Vote </th>
+
   </thead>
 
 <% @reviews.each do |review|%>
@@ -32,6 +34,7 @@
     <tr>
     <td><%= link_to review.title, ruby_gem_review_path(@ruby_gem, review)%></td>
     <td><%= review.created_at%></td>
+
     <td>
       <%if current_user.has_voted?(review)%>
         <li> Yes </li>

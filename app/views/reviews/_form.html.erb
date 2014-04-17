@@ -1,0 +1,7 @@
+<%= simple_form_for [@ruby_gem, @review] do |f| %>
+
+  <%= f.input :title %>
+  <%= f.input :body %>
+  <%= f.input :rating, collection: 1..5 %>
+  <%= f.button :submit %>
+<%end%>

@@ -10,5 +10,4 @@ class Review < ActiveRecord::Base
   belongs_to :ruby_gem
   has_many :votes, dependent: :destroy
 
-
 end
