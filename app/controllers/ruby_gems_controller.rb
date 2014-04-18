@@ -1,4 +1,10 @@
 class RubyGemsController < ApplicationController
+
+  def index
+    @ruby_gems = RubyGem.all
+    @ruby_gems = RubyGem.order("name").page(params[:page])
+  end
+
   def new
     @ruby_gem = RubyGem.new
   end
@@ -16,10 +22,6 @@ class RubyGemsController < ApplicationController
   def show
     @ruby_gem = RubyGem.find(params[:id])
     @reviews = @ruby_gem.reviews.reverse
-  end
-
-  def index
-    @ruby_gems = RubyGem.all
   end
 
 

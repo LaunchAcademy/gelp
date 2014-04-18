@@ -1,3 +1,5 @@
+<%= paginate @ruby_gems %>
+
 <h1>Submit a new gem for review</h1>
 
 <% if flash[:notice] %>
@@ -10,4 +12,4 @@
   <%= f.input :description %>
   <%= f.input :github_url %>
   <%= f.button :submit, "Add gem!" %>
-<%- end -%>
+<% end %>
