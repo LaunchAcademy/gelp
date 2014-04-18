@@ -21,7 +21,7 @@ class RubyGemsController < ApplicationController
 
   def show
     @ruby_gem = RubyGem.find(params[:id])
-    @reviews = @ruby_gem.reviews.reverse
+    @reviews = Review.where(ruby_gem_id: @ruby_gem.id).page(params[:page])
   end
 
 

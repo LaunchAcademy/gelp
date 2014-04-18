@@ -1,5 +1,4 @@
 <%= paginate @ruby_gems %>
-
 <% @ruby_gems.each do |ruby| %>
 <li><%= link_to ruby.name, ruby_gem_path(ruby) %> </li>
 <%end%>
