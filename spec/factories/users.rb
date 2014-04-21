@@ -6,6 +6,6 @@ FactoryGirl.define do
     first_name "foo"
     last_name "bar"
     password "foobar12345"
-
+    admin false
   end
 end
