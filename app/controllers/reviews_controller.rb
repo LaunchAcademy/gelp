@@ -3,7 +3,6 @@ class ReviewsController < ApplicationController
   before_action :find_ruby_gem
 
   def index
-    @reviews=Review.all
     @reviews = Review.order("title").page(params[:page])
   end
 

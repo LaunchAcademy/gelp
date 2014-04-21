@@ -1,7 +1,6 @@
 class RubyGemsController < ApplicationController
 
   def index
-    @ruby_gems = RubyGem.all
     @ruby_gems = RubyGem.order("name").page(params[:page])
   end
 
