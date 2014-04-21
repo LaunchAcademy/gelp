@@ -4,6 +4,8 @@ Gelp::Application.routes.draw do
     resources :reviews
   end
 
+  resources :votes, only:[:create, :update]
+
   devise_for :users
 
   namespace :admin do

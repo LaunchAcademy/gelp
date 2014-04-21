@@ -2,6 +2,10 @@ class ReviewsController < ApplicationController
 
   before_action :find_ruby_gem
 
+  def index
+    @reviews = Review.order("title").page(params[:page])
+  end
+
   def new
     @review = Review.new
   end
@@ -12,7 +16,7 @@ class ReviewsController < ApplicationController
       redirect_to ruby_gems_path,
       notice: "Successfully Submitted Review"
     else
-      render new,
+      render 'new',
       notice: "Something went wrong"
     end
   end
