@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <ul class="breadcrumbs">
+  <li><a href="/users/sign_in">Home</a></li>
+  <li><a href="/ruby_gems">Ruby Gems</a></li>
+  <li><a href="/ruby_gems/1/reviews">Reviews</a></li>
+  <li><a href="/ruby_gems/1/reviews/new">Review a Gem</a></li>
+  <li><a href="/users/sign_up">Sign Up</a></li>
+  <li><a href="/users/sign_in">Sign In</a></li>
+  <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+  </ul>
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,9 +28,7 @@
         <%= render 'layouts/messages'%>
         <% if user_signed_in? %>
           <%= "Welcome #{current_user.first_name}"%>
-         <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
         <% else %>
-          <li> <%= link_to 'Sign Up', new_user_registration_path %> </li>
          <%= render 'layouts/messages' %>  
         <% end %>
       </ul>
