@@ -5,7 +5,7 @@ class Vote < ActiveRecord::Base
   validates :review_id, presence: true
   validates :user_id, presence: true
   validates :vote_type, presence: true, inclusion: {in: (%w(upvote downvote))}
-  # validates :user_id, uniqueness: {scope: :review_id}
+  validates :user_id, uniqueness: {scope: :review_id}
   # will come back to this
 
 
