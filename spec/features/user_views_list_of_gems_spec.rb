@@ -7,13 +7,12 @@ feature "User views a list of gems", %Q{
 
 
 scenario "I want to view a list of gems" do
-  rubygems = FactoryGirl.create_list(:ruby_gem, 3)
+  rubygems = FactoryGirl.create_list(:ruby_gem, 2)
 
     visit ruby_gems_path
 
     rubygems.each do |rubygem|
       expect(page).to have_content(rubygem.name)
-      expect(page).to have_content(rubygem.description)
     end
   end
 end
@@ -32,10 +31,10 @@ end
 #   end
 
 #   scenario "no gems have been created yet"
-  
+
 #   expect(page).to have_content("No gems have been created. Add a gem!")
 
-# end 
+# end
 
 
 # scenario "no gems have been created yet"
