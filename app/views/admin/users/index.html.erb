@@ -1,6 +1,6 @@
-<%- if @user.present? -%>
+<%- if @users.present? -%>
   <table>
-    <%- @user.each do |user| %>
+    <%- @users.each do |user| %>
       <tr>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>

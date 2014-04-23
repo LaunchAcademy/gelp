@@ -1,34 +1,16 @@
-== README
+== Gelp
+
+Gelp is a four person group project built while attending Launch Academy. It is a site for reviewing Ruby Gems. We worked on this project as a group during the last couple weeks of Launch Academy when we weren't working on our breakable toys.
 
 
-GROUP PROJECT FOR LAUNCH ACADEMY - 
-GEM REVIEW SITE
+== Group members
+
+* Lauren Kruczyk https://github.com/laurenkruczyk
+* Albert Deng https://github.com/adeng21
+* Rohan Pandula https://github.com/rohanpandula
+* Michael Boerger https://github.com/michaelboerger
 
 
+Helen Hood https://github.com/hchood was our Group Mentor.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+It was great working with everyone and I'm really happy with how the group worked out. Look for these people on career day!  - Michael

@@ -1,6 +1,6 @@
-<%- if @review.present? -%>
+<%- if @reviews.present? -%>
   <table>
-    <%- @review.each do |review| %>
+    <%- @reviews.each do |review| %>
       <tr>
         <td><%= review.title %></td>
         <td><%= review.body %></td>

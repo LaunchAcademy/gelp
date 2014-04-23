@@ -19,6 +19,8 @@ gem 'foundation-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'email_spec'
+gem 'kaminari'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:first_name, :last_name, :email, :password, :password_confirmation)}
   end
 
+  def authenticate_admin
+    if !current_user || current_user.admin? != true
+      render 'public/404.html'
+    end
+  end
 end
