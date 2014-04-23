@@ -2,8 +2,8 @@
 <%= simple_form_for [@ruby_gem, @review] do |f| %>
   <%= f.input :title %>
   <%= f.input :body %>
-  <%= f.input :rating, collection: 1..5 %>
-  <%= f.button :submit %>
+  <%= f.input :rating, collection: 1..5, :as => :radio_buttons %>
+  <%= f.button :submit, :class => "button small" %>
 <%end%>
 </div>
 

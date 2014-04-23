@@ -24,13 +24,13 @@
 
   <body>
     <nav>
-      <ul>
+      <p>
         <% if user_signed_in? %>
           <%= "Welcome #{current_user.first_name}"%>
         <% else %>
          <%= render 'layouts/messages' %>  
         <% end %>
-      </ul>
+      </p>
     </nav>
     <%= yield %>
     <%= javascript_include_tag "application" %>

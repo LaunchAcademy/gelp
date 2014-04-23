@@ -42,7 +42,7 @@
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Helvetica Neue";
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -285,29 +285,29 @@ $info-color: #7CDDD9;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-// $crumb-bg: scale-color($secondary-color, $lightness: 55%);
+$crumb-bg: scale-color($secondary-color, $lightness: 65%);
 
 // We use these to set the padding around the breadcrumbs.
-// $crumb-padding: rem-calc(9 14 9);
-// $crumb-side-padding: rem-calc(12);
+$crumb-padding: rem-calc(9 14 9);
+$crumb-side-padding: rem-calc(12);
 
 // We use these to control border styles.
 // $crumb-function-factor: -10%;
-// $crumb-border-size: 1px;
+$crumb-border-size: 2px;
 // $crumb-border-style: solid;
 // $crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor);
 // $crumb-radius: $global-radius;
 
 // We use these to set various text styles for breadcrumbs.
-// $crumb-font-size: rem-calc(11);
-// $crumb-font-color: $primary-color;
+$crumb-font-size: rem-calc(11.5);
+$crumb-font-color: scale-color($primary-color, $lightness: 15%);
 // $crumb-font-color-current: #333;
 // $crumb-font-color-unavailable: #999;
 // $crumb-font-transform: uppercase;
 // $crumb-link-decor: underline;
 
 // We use these to control the slash between breadcrumbs
-// $crumb-slash-color: #aaa;
+$crumb-slash-color: scale-color($primary-color, $lightness: 15%);
 // $crumb-slash: "/";
 
 //
@@ -318,8 +318,8 @@ $info-color: #7CDDD9;
 
 // We use these to build padding for buttons.
 // $button-tny: rem-calc(10);
-// $button-sml: rem-calc(14);
-// $button-med: rem-calc(16);
+$button-sml: rem-calc(14);
+$button-med: rem-calc(16);
 // $button-lrg: rem-calc(18);
 
 // We use this to control the display property.
@@ -328,20 +328,20 @@ $info-color: #7CDDD9;
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
-// $button-font-color: #fff;
+$button-font-color: white;
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
+$button-font-sml: rem-calc(13);
+$button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: normal;
 // $button-font-align: center;
 
 // We use these to control various hover effects.
-// $button-function-factor: 5%;
+$button-function-factor: 50%;
 
 // We use these to control button border styles.
-// $button-border-width: 1px;
+$button-border-width: 1.5px;
 // $button-border-style: solid;
 
 // We use this to set the default radius used throughout the core.
@@ -748,7 +748,7 @@ $info-color: #7CDDD9;
 // $pagination-li-margin: rem-calc(5);
 
 // We use these for the pagination anchor links
-// $pagination-link-pad: rem-calc(1 10 1);
+$pagination-link-pad: rem-calc(1 10 1);
 // $pagination-link-font-color: #999;
 // $pagination-link-active-bg: scale-color(#fff, $lightness: -10%);
 
@@ -1039,9 +1039,9 @@ $info-color: #7CDDD9;
 // $table-even-row-bg: #f9f9f9  ;
 
 // These control the table cell border style
-// $table-border-style: solid;
-// $table-border-size: 1px;
-// $table-border-color: #ddd;
+$table-border-style: solid;
+$table-border-size: 1px;
+$table-border-color: #E0E0E0;
 
 // These control the table head styles
 // $table-head-bg: #f5f5f5  ;
@@ -1051,10 +1051,10 @@ $info-color: #7CDDD9;
 // $table-head-padding: rem-calc(8 10 10);
 
 // These control the row padding and font styles
-// $table-row-padding: rem-calc(9 10);
-// $table-row-font-size: rem-calc(14);
-// $table-row-font-color: #222;
-// $table-line-height: rem-calc(18);
+$table-row-padding: rem-calc(11 12);
+$table-row-font-size: rem-calc(15);
+$table-row-font-color: #4F4F4F;
+$table-line-height: rem-calc(35);
 
 // These are for controlling the display and margin of tables
 // $table-display: table-cell;
