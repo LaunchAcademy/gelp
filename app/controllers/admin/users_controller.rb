@@ -7,7 +7,9 @@ module Admin
 
     def destroy
       @user = User.find(params[:id])
-      @user.delete
+      if @user.delete
+        DeleteConfirmation.confirm(@user).deliver
+      end
       redirect_to admin_users_path
     end
   end

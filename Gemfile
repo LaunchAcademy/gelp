@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'email_spec'
 gem 'kaminari'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -53,6 +54,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
+  gem 'mailcatcher'
 end
 
 
