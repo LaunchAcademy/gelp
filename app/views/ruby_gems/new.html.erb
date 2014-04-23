@@ -1,13 +1,14 @@
-<h1>Submit a new gem for review</h1>
+<h1>Submit a new gem for Review</h1>
 
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
-<%= simple_form_for @ruby_gem  do |f| %>
+<%= simple_form_for @ruby_gem, :html => {:multipart => true} do |f| %>
   <%= f.input :name %>
   <%= f.input :author %>
   <%= f.input :description %>
   <%= f.input :github_url %>
+  <%= f.file_field :image %>
   <%= f.button :submit, "Add gem!" %>
 <% end %>
