@@ -21,5 +21,11 @@
 <%= button_to "Delete Gem #{ruby.name}", admin_ruby_gem_path(ruby), :class => "button tiny", method: :delete %>
  <%end%>
 </div>
+
+<li><%= link_to ruby.name, ruby_gem_path(ruby) %> </li>
+  <% if current_user && current_user.admin %>
+    <%= link_to "Delete Gem #{ruby.name}", admin_ruby_gem_path(ruby), method: :delete %>
+  <% end %>
+
 <%end%>
 
