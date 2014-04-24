@@ -3,7 +3,9 @@
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
-<div align= "left">
+
+<div class="row">
+<div class=image><%=image_tag "ruby1.png" %></div>
 <table width= "400">
   <tr>
     <td><%= "Gem name:   #{@ruby_gem.name}" %></td>
@@ -18,11 +20,10 @@
     <td><%= "Github URL: #{@ruby_gem.github_url}" %></td>
   </tr>
 </table>
-</div>
+
 
 <!-- need to add authorization for editing function -->
 
-<div align="center">
 <%= paginate @reviews %>
 <table width= "900">
   <thead>
@@ -30,8 +31,7 @@
     <th> Date Submitted </th>
     <th> Net Votes </th>
     <th> Ruby Gem Votes </th>
-    <th> Edit</th>
-  </thead>
+</thead>
 
 <% @reviews.each do |review|%>
   <tbody>
@@ -44,9 +44,9 @@
        <% if user_vote_on(current_user, review)%>
         <% if user_has_upvoted?(current_user, review)%>
         
-        <%= button_to 'Down', {action: "update", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "downvote"}, method: :put %>
+        <%= button_to 'Down', {action: "update", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "downvote"}, method: :put, :class => "button tiny" %>
         <% else%>
-        <%= button_to 'Up', {action: "update", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "upvote"}, method: :put %>
+        <%= button_to 'Up', {action: "update", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "upvote"}, method: :put, :class => "button tiny" %>
         <% end %>
     <% elsif current_user %>
         <%= button_to 'Up', {action: "create", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "upvote"}, method: :post%><%= review.up_vote_count%>
@@ -57,13 +57,21 @@
        Down: <%= review.down_vote_count%>
     <%end%>
     </td>
-    
-  <%if current_user == review.user%>
-    <td><%= button_to 'Edit Review', edit_ruby_gem_review_path(@ruby_gem, review)%></td>
-  <%end%>
+
+  <% if user_signed_in? %> 
+    <%if current_user == review.user%>
+      <td><%= button_to 'Edit Review', edit_ruby_gem_review_path(@ruby_gem, review, :class => "button small")%></td>
+      <%end%>
+  <% end %>
     </tr>
   </tbody>
-<%end%>
+  <%end%>
 </table>
-<li type= "none"><%= button_to 'Submit a Review', new_ruby_gem_review_path(@ruby_gem), :class => "button small", method: :get %></li>
 </div>
+<div align="center">
+ <li type= "none"><%= button_to 'Submit a Review', new_ruby_gem_review_path(@ruby_gem), :class => "button small", method: :get %></li>
+ </div>
+
+
+
+ 

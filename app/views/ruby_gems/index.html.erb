@@ -1,10 +1,25 @@
 <%= paginate @ruby_gems %>
+<div class=image><%=image_tag "ruby1.png" %></div>
 <% @ruby_gems.each do |ruby| %>
-<li type= "none"><%= link_to ruby.name, ruby_gem_path(ruby) %> </li>
+<div class="row">
+<table width= "400">
+  <tr>
+    <td><%= link_to "Gem: #{ruby.name} / click for reviews", ruby_gem_path(ruby) %></td>
+  </tr>
+  <tr>
+    <td>Added by <%= ruby.author %> </td>
+  </tr>
+  <tr>
+    <td><%= ruby.description %></td>
+  </tr>
+  <tr>
+    <td><%= ruby.github_url %></td>
+  </tr>
+</table>
+
 <% if current_user.admin %>
-    <%= button_to "Delete Gem #{ruby.name}", admin_ruby_gem_path(ruby), :class => "button small", method: :delete %>
-    <%end%> 
+<%= button_to "Delete Gem #{ruby.name}", admin_ruby_gem_path(ruby), :class => "button tiny", method: :delete %>
+ <%end%>
+</div>
 <%end%>
 
- <!-- //admin is creating problems on ruby_gems link// -->
- 

@@ -288,7 +288,7 @@ $info-color: #7CDDD9;
 $crumb-bg: scale-color($secondary-color, $lightness: 65%);
 
 // We use these to set the padding around the breadcrumbs.
-$crumb-padding: rem-calc(9 14 9);
+$crumb-padding: rem-calc(10 15 10);
 $crumb-side-padding: rem-calc(12);
 
 // We use these to control border styles.
@@ -308,7 +308,7 @@ $crumb-font-color: scale-color($primary-color, $lightness: 15%);
 
 // We use these to control the slash between breadcrumbs
 $crumb-slash-color: scale-color($primary-color, $lightness: 15%);
-// $crumb-slash: "/";
+$crumb-slash: "";
 
 //
 // BUTTONS
@@ -317,7 +317,7 @@ $crumb-slash-color: scale-color($primary-color, $lightness: 15%);
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
+$button-tny: rem-calc(6);
 $button-sml: rem-calc(14);
 $button-med: rem-calc(16);
 // $button-lrg: rem-calc(18);
@@ -484,7 +484,7 @@ $button-border-width: 1.5px;
 // $form-label-font-size: rem-calc(14);
 // $form-label-font-weight: normal;
 // $form-label-line-height: 1.5;
-// $form-label-font-color: scale-color(#000, $lightness: 30%);
+$form-label-font-color: #071672;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);

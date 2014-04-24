@@ -1,15 +1,15 @@
-<div class= "row">
-<h1>Submit a new gem for review</h1>
-
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
+
+<div class= "row">
+<h1>Submit a new gem for review</h1>
 <%= simple_form_for @ruby_gem  do |f| %>
   <%= f.input :name %>
   <%= f.input :author %>
   <%= f.input :description %>
   <%= f.input :github_url %>
-  <%= f.button :submit, "Add Gem!" :class => "button small" %>
+  <%= f.button :submit, "Add Gem!", :class => "button small" %>
 <% end %>
 </div>

@@ -1,4 +1,11 @@
 <%= paginate @reviews %>
+<div class=image><%=image_tag "ruby1.png" %></div>
 <% @reviews.each do |review| %>
+<li type= "none" font-size="20"><%= @review.title%><li>
+<li type= "none"><%= @review.body%></li>
+<li type= "none"><%= @review.rating%></li>
 <li type= "none"><%= link_to review.title, ruby_gem_reviews_path(review) %> </li>
+<% if current_user.admin %>
+    <%= button_to "Delete Review #{review.title}", admin_review_path(review), :class => "button small", method: :delete %>
+    <%end%> 
 <%end%>
