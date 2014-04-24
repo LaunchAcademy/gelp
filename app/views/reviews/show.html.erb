@@ -1,8 +1,25 @@
-<div class="row">
-<div class=image><%=image_tag "ruby1.png" %></div>
-<li type= "none"><%= @review.title%><li>
-<li type= "none"><%= @review.body%></li>
-<li type= "none"><%= @review.rating%></li>
-</div>
 
+<div class=image><%=image_tag "ruby1.png" %></div>
+
+<div class="row">
+<table width= "400">
+<tr>
+</td><%= @review.title%></td>
+</tr>
+<tr>
+<td><%= @review.body%></td>
+</tr>
+<tr>
+<td>Rating: <%= @review.rating%></td>
+</tr>
+</table>
+
+
+  <% if user_signed_in? %>
+    <%if current_user == @review.user%>
+        <td><%= button_to 'Edit Review', edit_ruby_gem_review_path(@ruby_gem, @review), :class => "button tiny", method: :get %></td>
+      <%end%>
+    <%end%>
+  </div>
+    
 

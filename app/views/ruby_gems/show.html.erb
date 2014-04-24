@@ -58,11 +58,6 @@
     <%end%>
     </td>
 
-  <% if user_signed_in? %> 
-    <%if current_user == review.user%>
-      <td><%= button_to 'Edit Review', edit_ruby_gem_review_path(@ruby_gem, review, :class => "button small")%></td>
-      <%end%>
-  <% end %>
     </tr>
   </tbody>
   <%end%>
