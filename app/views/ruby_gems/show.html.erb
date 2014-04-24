@@ -8,16 +8,16 @@
 <div class=image><%=image_tag "ruby1.png" %></div>
 <table width= "400">
   <tr>
-    <td><%= "Gem name:   #{@ruby_gem.name}" %></td>
+    <td><h6><%= image_tag "ruby2.png" %> <%= @ruby_gem.name %></h6></td>
   </tr>
   <tr>
-    <td><%= "Author:     #{@ruby_gem.author}" %></td>
+    <td><%= "Added by #{@ruby_gem.author}" %></td>
   </tr>
   <tr>
-    <td><%= "Description: #{@ruby_gem.description}" %></td>
+    <td><%= @ruby_gem.description %></td>
   </tr>
   <tr>
-    <td><%= "Github URL: #{@ruby_gem.github_url}" %></td>
+    <td><%= @ruby_gem.github_url %></td>
   </tr>
 </table>
 
@@ -36,7 +36,7 @@
 <% @reviews.each do |review|%>
   <tbody>
     <tr>
-    <td><%= link_to review.title, ruby_gem_review_path(@ruby_gem, review)%></td>
+    <td><h6><%= link_to review.title, ruby_gem_review_path(@ruby_gem, review)%></h6></td>
     <td><%= review.created_at%></td>
     <td>Net: <%= review.calculate_votes %></td>
     

@@ -477,12 +477,12 @@ $button-border-width: 1.5px;
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-// $form-spacing: rem-calc(16);
+$form-spacing: rem-calc(16);
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
-// $form-label-font-size: rem-calc(14);
-// $form-label-font-weight: normal;
+$form-label-font-size: rem-calc(14.5);
+$form-label-font-weight: normal;
 // $form-label-line-height: 1.5;
 $form-label-font-color: #071672;
 // $form-label-bottom-margin: 0;
