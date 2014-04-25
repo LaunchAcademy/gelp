@@ -1,15 +1,12 @@
 == Gelp
 
-Gelp is a four person group project built while attending Launch Academy. It is a site for reviewing Ruby Gems. We worked on this project as a group during the last couple weeks of Launch Academy when we weren't working on our breakable toys.
-
+Gelp is a three person group project built while attending Launch Academy. It is a site for reviewing Ruby Gems. We worked on this project as a group during the last couple weeks of Launch Academy when we weren't working on our breakable toys.
 
 == Group members
 
 * Lauren Kruczyk https://github.com/laurenkruczyk
 * Albert Deng https://github.com/adeng21
-* Rohan Pandula https://github.com/rohanpandula
 * Michael Boerger https://github.com/michaelboerger
-
 
 Helen Hood https://github.com/hchood was our Group Mentor.
 
