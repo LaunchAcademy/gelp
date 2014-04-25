@@ -18,8 +18,6 @@
   font-family: "Trebuchet MS"
 }
 
-
-
  .image {
   float: right;
   position: absolute;
@@ -27,14 +25,12 @@
   top: 135px;
   }
 
-
 #footer {
   background: url("footer.png");
   max-width: 100%;
   text-align: center;
   color: #9c9c9c;
 }
-
 
 html, body {height: 100%;}
 
@@ -51,4 +47,8 @@ html, body {height: 100%;}
 .background {
     background-image:url("gpattern.png");
     background-repeat:repeat;
+}
+
+li {
+  list-style-type:none;
 }

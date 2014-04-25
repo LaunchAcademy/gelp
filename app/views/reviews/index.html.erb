@@ -3,22 +3,22 @@
 <div class=image><%=image_tag "ruby1.png" %></div>
 
 <div class="row">
-<% @reviews.each do |review| %>
-<table width="400">
-<tr>
-<td><%= review.title%></td>
-</tr>
-<tr>
-<td><%= review.body%></td>
-</tr>
-<tr>
-<td>Rating: <%= review.rating%></td>
-</tr>
-</table>
+  <% @reviews.each do |review| %>
+  <table width="400">
+    <tr>
+    <td><%= review.title%></td>
+    </tr>
+    <tr>
+    <td><%= review.body%></td>
+    </tr>
+    <tr>
+    <td>Rating: <%= review.rating%></td>
+    </tr>
+  </table>
 
 
 <% if current_user.admin %>
     <%= button_to "Delete Review #{review.title}", admin_review_path(review), :class => "button small", method: :delete %>
-    <%end%> 
-<%end%>
-</li>
+  <%end%> 
+ <%end%>
+
