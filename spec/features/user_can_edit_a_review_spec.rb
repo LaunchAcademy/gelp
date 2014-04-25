@@ -43,7 +43,7 @@ context 'user edits own review' do
       click_on 'Update Review'
 
       expect(page).to_not have_content("Review Successfully Updated")
-      expect(@review.title).to eql("Ruby Gem")
+      expect(@review.title).to eql("wicked awesome gem")
    end
 end
 

@@ -36,7 +36,6 @@ feature "Admin can delete items", %Q{
     expect(page).to have_content("Delete Review #{@review.title}")
 
     click_on "Delete Review #{@review.title}"
-
     expect(page).to_not have_content(@review.title)
 
   end
