@@ -20,7 +20,6 @@ context 'user edits own review' do
     sign_in_as(@user)
     visit ruby_gems_path
     click_on @ruby_gem.name
-    click_on 'Edit Review'
   end
 
    scenario 'signed in user edits their review' do

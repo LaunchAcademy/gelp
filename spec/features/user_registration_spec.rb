@@ -29,7 +29,6 @@ feature 'user signs up', %Q{
       fill_in 'Password confirmation', with: user.password
       click_button 'Sign up'
       expect(page).to have_content("Sign Out")
-      expect(page).to have_content ("You're in!")
       expect(current_path).to eql(root_path)
 
     end

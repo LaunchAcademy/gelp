@@ -29,7 +29,7 @@ feature "User creates new gem", %Q{
     fill_in "Description", with: @ruby_gem.description
     fill_in "Github url", with: @ruby_gem.github_url
 
-    click_on "Add gem!"
+    click_on "Add Gem!"
 
     expect(page).to have_content (@ruby_gem.name)
     expect(page).to have_content (@ruby_gem.description)
