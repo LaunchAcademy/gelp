@@ -1,13 +1,13 @@
 
+.new {
+  font-family:"Trebuchet MS";
+  color:#303030;
+}
+
 a:hover {
-  color:#0000FF;
+  color:#FF0000;
   text-decoration:none;
 }  
-
-a:active {
-  color:#FF0608;
-  text-decoration:none;
-  }  
 
 #gelp {
   font-size:80px;

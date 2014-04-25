@@ -299,7 +299,7 @@ $crumb-border-size: 2px;
 // $crumb-radius: $global-radius;
 
 // We use these to set various text styles for breadcrumbs.
-$crumb-font-size: rem-calc(11.5);
+$crumb-font-size: rem-calc(12.5);
 $crumb-font-color: scale-color($primary-color, $lightness: 15%);
 // $crumb-font-color-current: #333;
 // $crumb-font-color-unavailable: #999;
@@ -327,11 +327,11 @@ $button-med: rem-calc(16);
 // $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-// $button-font-family: $body-font-family;
+$button-font-family: "Trebuchet MS";
 $button-font-color: white;
 // $button-font-color-alt: #333;
-// $button-font-tny: rem-calc(11);
-$button-font-sml: rem-calc(13);
+$button-font-tny: rem-calc(12);
+$button-font-sml: rem-calc(14);
 $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: normal;
@@ -484,11 +484,11 @@ $form-spacing: rem-calc(16);
 $form-label-font-size: rem-calc(14.5);
 $form-label-font-weight: normal;
 // $form-label-line-height: 1.5;
-$form-label-font-color: #071672;
+$form-label-font-color: #303030;
 // $form-label-bottom-margin: 0;
-// $input-font-family: inherit;
-// $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
+$input-font-family: "Trebuchet MS";
+$input-font-color: #767787;
+$input-font-size: rem-calc(14);
 // $input-bg-color: #fff;
 // $input-focus-bg-color: scale-color(#fff, $lightness: -2%);
 // $input-border-color: scale-color(#fff, $lightness: -20%);
