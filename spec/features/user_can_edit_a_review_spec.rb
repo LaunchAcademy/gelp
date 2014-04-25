@@ -19,13 +19,15 @@ context 'user edits own review' do
     @review = FactoryGirl.create(:review, user: @user, ruby_gem: @ruby_gem)
     sign_in_as(@user)
     visit ruby_gems_path
-    click_on @ruby_gem.name
+    click_on "#{@ruby_gem.name} / click for reviews"
+    click_on @review.title
+    click_on 'Edit Review'
   end
 
    scenario 'signed in user edits their review' do
       fill_in 'Title', with: @review.title
       fill_in 'Body', with: @review.body
-      select @review.rating, from: 'Rating'
+      choose @review.rating
       click_on 'Update Review'
 
       expect(page).to have_content("Review Successfully Updated")
@@ -37,7 +39,7 @@ context 'user edits own review' do
 
       fill_in 'Title', with: ""
       fill_in 'Body', with: ""
-      select '5', from: 'Rating'
+      choose '5'
       click_on 'Update Review'
 
       expect(page).to_not have_content("Review Successfully Updated")

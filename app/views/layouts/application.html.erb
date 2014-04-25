@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+<div id="wrap">
+  <div id="main">
+   <body class= "background">
+  
+    <ul class="breadcrumbs">
+      <li><%= link_to 'Home', root_path, method: :get %></li>
+      <li><%= image_tag 'ruby2.png' %></li>
+      <li><%= link_to 'Ruby Gems', ruby_gems_path, method: :get %></li>
+      <li><%= image_tag 'ruby2.png' %></li>
+      <li><%= link_to 'Add a Gem', new_ruby_gem_path, method: :get %></li>
+      <li><%= image_tag 'ruby2.png' %></li>
+      <% if user_signed_in? %>
+      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+      <li><%= image_tag 'ruby2.png' %></li>
+      <% else %>
+      <li><%= link_to 'Sign Up', new_user_registration_path, method: :get %> </li>
+      <li><%= image_tag 'ruby2.png' %></li>
+      <li><%= link_to 'Sign In', new_user_session_path, method: :get %> </li>
+       <li><%= image_tag 'ruby2.png' %></li>
+     <% end %>
+    </ul>
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= csrf_meta_tags %>
+     <%= stylesheet_link_tag    "application" %>
+     <%= javascript_include_tag "vendor/modernizr" %>
+     <%= csrf_meta_tags %>
   </head>
-
-  <body>
+   <body>
     <nav>
-      <ul>
-        <%= render 'layouts/messages'%>
+      <p>
         <% if user_signed_in? %>
           <%= "Welcome #{current_user.first_name}"%>
-         <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
         <% else %>
-          <li> <%= link_to 'Sign Up', new_user_registration_path %> </li>
          <%= render 'layouts/messages' %>  
         <% end %>
-      </ul>
+      </p>
     </nav>
+
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
+</body>
+</div>
+</div>
+
+  <div id="footer">
+     <div id="copyright">
+      Copyright © 2014 Gelp. All Rights Reserved.
+     </div>
+    <h6> Created by Albert, Lauren, and Michael</h6>
+      <a href="https://github.com/launchacademy/gelp"><%=image_tag('github-icon-1.png') %></a>
+  </div>
+
+
+
+
+  
+
+
+
