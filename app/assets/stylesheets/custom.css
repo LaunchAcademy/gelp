@@ -31,15 +31,15 @@ a:hover {
  .image {
   float: right;
   position: absolute;
-  right: 250px;
+  right: 190px;
   top: 135px;
   }
 
   .rubygems {
   float: right;
   position: absolute;
-  right: 250px;
-  top: 215px;
+  right: 190px;
+  top: 180px;
  }
 
 /* .column {

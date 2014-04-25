@@ -4,7 +4,7 @@
 <div class="row">
 <%= paginate @ruby_gems %>
 <% @ruby_gems.each do |ruby| %>
-  <table width= "400">
+  <table width= "415">
     <tr>
       <td><%=image_tag "ruby2.png" %> <%= link_to "#{ruby.name}     / click for reviews", ruby_gem_path(ruby) %></td>
     </tr>
