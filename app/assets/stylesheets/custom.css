@@ -25,6 +25,21 @@
   top: 135px;
   }
 
+  .rubygems {
+  float: right;
+  position: absolute;
+  right: 250px;
+  top: 215px;
+ }
+
+/* .column {
+  float: right;
+  position: absolute;
+  left: 730px;
+  top: 600px;
+  bottom:0;
+}*/
+
 #footer {
   background: url("footer.png");
   max-width: 100%;
