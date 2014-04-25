@@ -1,9 +1,9 @@
-<%= paginate @ruby_gems %>
 
 <div class=rubygems><%=image_tag "ruby1.png" %></div>
 
-<% @ruby_gems.each do |ruby| %>
 <div class="row">
+<%= paginate @ruby_gems %>
+<% @ruby_gems.each do |ruby| %>
   <table width= "400">
     <tr>
       <td><%=image_tag "ruby2.png" %> <%= link_to "Gem: #{ruby.name}     / click for reviews", ruby_gem_path(ruby) %></td>
@@ -22,5 +22,5 @@
   <% if current_user && current_user.admin %>
     <%= link_to "Delete Gem #{ruby.name}", admin_ruby_gem_path(ruby), method: :delete %>
   <% end %>
-</div>
 <%end%>
+</div>

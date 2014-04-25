@@ -304,7 +304,7 @@ $crumb-font-color: scale-color($primary-color, $lightness: 15%);
 // $crumb-font-color-current: #333;
 // $crumb-font-color-unavailable: #999;
 // $crumb-font-transform: uppercase;
-// $crumb-link-decor: underline;
+$crumb-link-decor: none;
 
 // We use these to control the slash between breadcrumbs
 $crumb-slash-color: scale-color($primary-color, $lightness: 15%);
@@ -748,8 +748,8 @@ $form-label-font-color: #071672;
 // $pagination-li-margin: rem-calc(5);
 
 // We use these for the pagination anchor links
-$pagination-link-pad: rem-calc(1 10 1);
-// $pagination-link-font-color: #999;
+// $pagination-link-pad: rem-calc(1 10 1);
+// $pagination-link-font-color: #90c4ff;
 // $pagination-link-active-bg: scale-color(#fff, $lightness: -10%);
 
 // We use these for disabled anchor links

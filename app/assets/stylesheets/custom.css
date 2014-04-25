@@ -1,4 +1,14 @@
 
+a:hover {
+  color:#0000FF;
+  text-decoration:none;
+}  
+
+a:active {
+  color:#FF0608;
+  text-decoration:none;
+  }  
+
 #gelp {
   font-size:80px;
   font-weight:bold;
@@ -29,7 +39,7 @@
   float: right;
   position: absolute;
   right: 250px;
-  top: 215px;
+  top: 200px;
  }
 
 /* .column {
