@@ -1,5 +1,5 @@
 
-.new {
+.header {
   font-family:"Trebuchet MS";
   color:#303030;
 }
@@ -39,7 +39,7 @@ a:hover {
   float: right;
   position: absolute;
   right: 250px;
-  top: 200px;
+  top: 215px;
  }
 
 /* .column {

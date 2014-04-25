@@ -5,7 +5,7 @@
 
 
 <div class="row">
-<div class=image><%=image_tag "ruby1.png" %></div>
+<div class="image"><%=image_tag "ruby1.png" %></div>
   <table width= "400">
     <tr>
       <td><h6><%= image_tag "ruby2.png" %> <%= @ruby_gem.name %></h6></td>
@@ -25,10 +25,10 @@
 <%= paginate @reviews %>
 <table width= "900">
   <thead>
-    <th> Current Reviews</th>
+    <th> User Reviews </th>
     <th> Date Submitted </th>
     <th> Net Votes </th>
-    <th> Ruby Gem Votes </th>
+    <th> Vote for Gem! </th>
 </thead>
 
 <% @reviews.each do |review|%>
