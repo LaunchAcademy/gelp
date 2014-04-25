@@ -6,9 +6,6 @@ feature "Admin can delete items", %Q{
   So that I can moderate the site
 } do
 
-# Admin can delete a gem
-# Admin can delete a review
-# Admin can delete a user
 
   before :each do
     @ruby_gem = FactoryGirl.create(:ruby_gem)

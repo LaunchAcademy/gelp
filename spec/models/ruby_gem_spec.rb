@@ -1,10 +1,7 @@
 require 'spec_helper'
 
 describe RubyGem do
-  # before(:each) do
-  # FactoryGirl.create(:ruby_gem)
   let!(:ruby_gem) { FactoryGirl.create(:ruby_gem) }
-
 
   it { should validate_presence_of(:name) }
   it { should validate_uniqueness_of(:name) }

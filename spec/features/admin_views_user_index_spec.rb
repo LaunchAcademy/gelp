@@ -6,10 +6,6 @@ feature "Admin views user index", %Q{
   So that I can delete users
 } do
 
-  # Admin can view a list of users
-  # A non-admin user is not able to view the user index
-  # An unauthenticated user is not able to view the user index
-
   before :each do
     @user = FactoryGirl.create(:user)
     @admin = FactoryGirl.create(:user, admin: true)
