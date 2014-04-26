@@ -6,11 +6,7 @@ feature 'user is sent a notification email when account is deleted by admin', %Q
   So that I am informed that my account no longer exists
 } do
 
-  #Acceptance Criteria
-  #When an admin deletes an account, the account owner is automatically sent an email notifying him of the action
 
-  scenario 'account is deleted by admin' do
-    ActionMailer::Base.deliveries = []
     user = FactoryGirl.create(:user)
     admin = FactoryGirl.create(:user, admin: true)
 

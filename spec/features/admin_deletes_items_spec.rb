@@ -6,9 +6,6 @@ feature "Admin can delete items", %Q{
   So that I can moderate the site
 } do
 
-# Admin can delete a gem
-# Admin can delete a review
-# Admin can delete a user
 
   before :each do
     @ruby_gem = FactoryGirl.create(:ruby_gem)
@@ -36,7 +33,6 @@ feature "Admin can delete items", %Q{
     expect(page).to have_content("Delete Review #{@review.title}")
 
     click_on "Delete Review #{@review.title}"
-
     expect(page).to_not have_content(@review.title)
 
   end

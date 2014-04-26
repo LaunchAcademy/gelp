@@ -6,14 +6,7 @@ feature 'user signs up', %Q{
   So I can be a contributing member
   } do
 
-    #ACCEPTANCE CRITERIA
-    #*I must provide a first name and last name
-    #*I must provide a unique email address
-    #*I must provide a password
-    #*I must provide a password confirmation
-    #*If I do not provide the required information, I get an error message
-    #*If the email I provide is already registered, I receive an error message
-    #*If my password & password confirmation do not match, I receive an error message
+   
     before :each do
            visit root_path
       click_link 'Sign Up'
@@ -29,9 +22,7 @@ feature 'user signs up', %Q{
       fill_in 'Password confirmation', with: user.password
       click_button 'Sign up'
       expect(page).to have_content("Sign Out")
-      expect(page).to have_content ("You're in!")
       expect(current_path).to eql(root_path)
-
     end
 
 
@@ -62,7 +53,6 @@ feature 'user signs up', %Q{
       expect(page).to have_content ("doesn't match Password")
       expect(page).to_not have_content("Sign Out")
     end
-
-
-
 end
+
+

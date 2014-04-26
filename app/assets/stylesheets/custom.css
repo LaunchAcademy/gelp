@@ -1,0 +1,79 @@
+
+.header {
+  font-family:"Trebuchet MS";
+  color:#303030;
+}
+
+a:hover {
+  color:#FF0000;
+  text-decoration:none;
+}  
+
+#gelp {
+  font-size:80px;
+  font-weight:bold;
+  font-style:italic;
+  color:#BE1000;
+  margin-top: 25px; 
+  margin-left: 60px;
+  font-family:sans-serif;
+}
+
+#home {
+  font-size:40px;
+  font-style:italic;
+  color:#676781 ;
+  margin-top: 15px; 
+  margin-left: 20px;
+  font-family: "Trebuchet MS"
+}
+
+ .image {
+  float: right;
+  position: absolute;
+  right: 190px;
+  top: 135px;
+  }
+
+  .rubygems {
+  float: right;
+  position: absolute;
+  right: 190px;
+  top: 180px;
+ }
+
+/* .column {
+  float: right;
+  position: absolute;
+  left: 730px;
+  top: 600px;
+  bottom:0;
+}*/
+
+#footer {
+  background: url("footer.png");
+  max-width: 100%;
+  text-align: center;
+  color: #9c9c9c;
+}
+
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+  padding-bottom: 150px;}  
+
+#footer {position: relative;
+  margin-top: -150px; 
+  height: 150px;
+  clear:both;} 
+
+.background {
+    background-image:url("gpattern.png");
+    background-repeat:repeat;
+}
+
+li {
+  list-style-type:none;
+}

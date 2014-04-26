@@ -6,10 +6,6 @@ feature "Admin views review index", %Q{
   So that I can delete reviews
 } do
 
-  # Admin can view a list of reviews
-  # A non-admin user is not able to view the review index
-  # An unauthenticated user is not able to view the review index
-
   before :each do
     @user = FactoryGirl.create(:user)
     @admin = FactoryGirl.create(:user, admin: true)

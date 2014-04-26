@@ -1,7 +1,26 @@
+
+<div class="rubygems"><%=image_tag "ruby1.png" %></div>
+
+<div class="row">
 <%= paginate @ruby_gems %>
 <% @ruby_gems.each do |ruby| %>
-<li><%= link_to ruby.name, ruby_gem_path(ruby) %> </li>
+  <table width= "415">
+    <tr>
+      <td><%=image_tag "ruby2.png" %> <%= link_to "#{ruby.name}     / click for reviews", ruby_gem_path(ruby) %></td>
+    </tr>
+    <tr>
+      <td>Gem added by <%= ruby.author %> </td>
+    </tr>
+    <tr>
+      <td><%= ruby.description %></td>
+    </tr>
+    <tr>
+      <td><%= ruby.github_url %></td>
+    </tr>
+  </table>
+
   <% if current_user && current_user.admin %>
     <%= link_to "Delete Gem #{ruby.name}", admin_ruby_gem_path(ruby), method: :delete %>
   <% end %>
 <%end%>
+</div>

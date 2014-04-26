@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :review do
-     title "Ruby Gem"
+     title "wicked awesome gem"
      body "review here"
      rating 5
      user
