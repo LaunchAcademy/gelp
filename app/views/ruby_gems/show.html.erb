@@ -38,7 +38,7 @@
     <td><%= review.created_at%></td>
     <td>Net: <%= review.calculate_votes %></td>
     
-    <td><% if user_signed_in? %>
+    <td>   <!-- <p><% if user_signed_in? %><p> -->
       <% if user_vote_on(current_user, review)%>
         <% if user_has_upvoted?(current_user, review)%>
         
@@ -47,8 +47,8 @@
         <%= button_to 'Up', {action: "update", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "upvote"}, method: :put, :class => "button tiny" %>
         <% end %>
       <% elsif current_user %>
-        <%= button_to 'Up', {action: "create", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "upvote"}, method: :post%><%= review.up_vote_count%>
-        <%= button_to 'Down', {action: "create", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "downvote"}, method: :post%><%= review.down_vote_count%>
+        <%= button_to 'Up', {action: "create", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "upvote"}, method: :post, :class => "button tiny" %><%= review.up_vote_count%>
+        <%= button_to 'Down', {action: "create", controller: "votes", review_id: review.id, user_id: current_user.id, vote_type: "downvote"}, method: :post, :class => "button tiny" %><%= review.down_vote_count%>
       <%end%> 
     <%else%>
        Up:   <%= review.up_vote_count%>
