@@ -38,7 +38,7 @@
     <td><%= review.created_at%></td>
     <td>Net: <%= review.calculate_votes %></td>
     
-    <td>   <!-- <p><% if user_signed_in? %><p> -->
+    <td><% if user_signed_in? %>
       <% if user_vote_on(current_user, review)%>
         <% if user_has_upvoted?(current_user, review)%>
         
