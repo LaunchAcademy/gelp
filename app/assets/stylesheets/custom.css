@@ -51,11 +51,12 @@ a:hover {
 }*/
 
 #footer {
-  background: url("footer.png");
+  background: url(image_path("footer.png"));
   max-width: 100%;
   text-align: center;
   color: #9c9c9c;
 }
+
 
 html, body {height: 100%;}
 
@@ -70,7 +71,7 @@ html, body {height: 100%;}
   clear:both;} 
 
 .background {
-    background-image:url("gpattern.png");
+    background-image:url(image_path("gpattern.png"));
     background-repeat:repeat;
 }
 
