@@ -6,8 +6,7 @@ I want to be able to edit my review
 So i can update my thoughts on the review
 } do
 
-#Acceptance Criteria
-#A User can edit a review that he/she created
+
 before :each do
     @ruby_gem = FactoryGirl.create(:ruby_gem)
     @user = FactoryGirl.create(:user)
@@ -54,6 +53,5 @@ end
     click_on @ruby_gem.name
 
     expect(page).to_not have_content('Edit Review')
- end
-
+  end
 end

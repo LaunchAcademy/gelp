@@ -6,8 +6,6 @@ feature 'user sign out', %Q{
   So that I can exit the system
 } do
 
-  #ACCEPTANCE CRITERIA
-  #Once signed in, I must be able to log out
 
   scenario 'A signed-in user can log out of his account' do
     user = FactoryGirl.create(:user)
@@ -16,7 +14,5 @@ feature 'user sign out', %Q{
 
     expect(page).to have_content("Signed out successfully")
     expect(current_path).to eql(root_path)
-
   end
-
 end

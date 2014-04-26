@@ -5,10 +5,10 @@
 
 
 <div class="row">
-<div class="image"><%=image_tag "ruby1.png" %></div>
+<div class="image"><%=image_tag (image_path("ruby1.png")) %></div>
   <table width= "450">
     <tr>
-      <td><h6><%= image_tag "ruby2.png" %> <%= @ruby_gem.name %></h6></td>
+      <td><h6><%= image_tag (image_path("ruby2.png")) %> <%= @ruby_gem.name %></h6></td>
     </tr>
     <tr>
       <td><%= "Added by #{@ruby_gem.author}" %></td>
