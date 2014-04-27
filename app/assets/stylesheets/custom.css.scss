@@ -29,7 +29,7 @@ a:hover {
   color:#676781 ;
   margin-top: 15px; 
   margin-left: 20px;
-  font-family: "Trebuchet MS"
+  font-family: "Trebuchet MS";
 }
 
  .image {
@@ -46,13 +46,11 @@ a:hover {
   top: 180px;
  }
 
-/* .column {
-  float: right;
-  position: absolute;
-  left: 730px;
-  top: 600px;
-  bottom:0;
-}*/
+
+ #copyright {
+  position: relative;
+  margin-top: 15px; 
+}
 
 #footer {
   background: url(image_path("footer.png"));
